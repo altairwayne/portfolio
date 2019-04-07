@@ -4,27 +4,93 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style type="text/css" media="all">
-		html, body {
-			min-height: 100%
+		body {
+			padding-left: 50px;
+			font-family: Myriad Pro;
+			background-color: #fffacd;
 		}
 
-		body {
-			padding: 0;
-			margin: 0;
-			color: black;
-			font-family: Arial, sans-serif;
-			width: 100%;
-			padding-left: 20px;
-			
-			
-			
-			
-			
-		}
+		.list4b {
+    padding:0;
+    list-style: none;
+    counter-reset: li;
+}    
+.list4b li {
+    position: relative;
+    padding:12px 20px 20px 28px;
+    margin-left: 40px;
+    transition-duration: 0.3s;
+}
+.list4b li:before {
+    border: 6px solid transparent;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    left:-30px;
+    width:42px;
+    text-align:center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ADCEE9;
+    counter-increment: li;
+    content: counter(li);
+    transition-duration: 0.3s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+.list4b li:hover:before {
+    color: #337AB7;
+}
+.list4b li:after {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 42px;
+    height: 42px;
+    border: 6px solid #DDDDDD;
+    border-radius: 50%;
+    content: '';
+    opacity: 0.5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+.list4b li:hover:after {
+    animation: 500ms ease-in-out 0s bounceIn;
+    opacity: 1;
+    border: 6px solid #ADCEE9;    
+}    
+ 
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        transform: scale3d(1.3, 1.3, 1.3);
+    }
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
 		
 		a {
 			color: #800000;
 		}
+
+
 	</style>
 </head>
 <body>
@@ -35,50 +101,41 @@
 <h2> beginner backend </h2>
 <h1>27.01.2019</h1>
 
-	<ul>
+	<ul class="list4b">
 		
 		<li>циклы</li>
 		
 
-	</ul>
+	
 
-	<ul>
+	
 		<li>переменные</li>
-	</ul>
+	
 
-	<ul>
+	
 		<li><a href="https://github.com/altairwayne/ssad/blob/master/l1_%D1%86%D0%B8%D0%BA%D0%BB%D1%8B">операторы</a></li>
-	</ul>
+	
 
-
-	<ul>
+	
 		<li>массивы</li>
-	</ul>
+	
 
-	<ul>
+	
 		<li>присвоение</li>
 	</ul>		
 
 <h1>03.02.2019</h1>
 
-	<ul>
+	<ul class="list4b">
 		
 		<li>основы массивов</li>
-	</ul>
 
-	<ul>
 		<li>создание массива с помощью цикла</li>
-	</ul>
 
-	<ul>
 		<li><a href="https://github.com/altairwayne/ssad/blob/master/l2_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D1%8B%20%D0%B8%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8">hello функция</a></li>
-	</ul>
 
-	<ul>
 		<li>обращение к функции</li>
-	</ul>
 
-	<ul>
 		<li>таблица умножение с циклом</li>
 	</ul>
 
@@ -86,115 +143,76 @@
 <h1>10.02.2019</h1>
 
 
-	<ul>
+	<ul class="list4b">
 		<li>регулярные выражения</li>
-	</ul>
 
-	<ul>
 		<li>функции регулярных выражении</li>
-	</ul>
 
-	<ul>
 		<li>сравнение с шаблоном регулярного выражения</li>
-	</ul>
 
-	<ul>
 		<li>извлекать фрагменты с поомщью регулярного выражения</li>
-	</ul>
-	<ul>
 		<li><a href="https://github.com/altairwayne/ssad/blob/master/%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D0%BE%D0%B2">парсинг с помощью регулярного выражения</a></li>
 	</ul>
 <h1>17.02.2019</h1>
 
-	<ul>		
+	<ul class="list4b">		
 		<li><a href="https://github.com/altairwayne/ssad/blob/master/%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D0%BE%D0%B2">парсинг сайта</a></li>
-	</ul>
 
-	<ul>
 		<li>перебирать массив данных</li>
-	</ul>
 
-	<ul>
 		<li>добавлять массив в таблицу</li>
-	</ul>
 
-	<ul>
 		<li>разбивать строку по регулярному выражению</li>
-	</ul>
 
-	<ul>
 		<li>работа preg_match_all</li>
 	</ul>
 
 <h1>24.02.2019</h1>
 
-<ul>
+<ul class="list4b">
 	<li><a href="https://github.com/altairwayne/ssad/blob/
 	master/%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3%D0%B0">функции парсинга</a></li>
-</ul>
 
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/
 	master/%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3%D0%B0">вытягивать ресторан из страницы</a></li>
-</ul>
 
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/
 	master/%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3%D0%B0">находить регулярное выражение в обьекте</a></li>
-</ul>
 
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/
 	master/%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3%D0%B0">записывать результат в массив</a></li>
 </ul>
 
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/
 	master/%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3%D0%B0">находить максимальную станицу</a></li>
 </ul>
 
 <h1>3.03.2019</h1>
 
-<ul>
+<ul class="list4b">
   <li>научился создавать свою страницу в github</li>
-</ul> 
 
-<ul>
   <li><a href="https://github.com/altairwayne/ssad/blob/master/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0">разобрался в коде про сортировку</a></li>
-</ul> 
 
-<ul>
   <li>изучил основы phpMyAdmin</li>
-</ul> 
 
-<ul>
   <li><a href="https://github.com/altairwayne/ssad/blob/master/rest_db">взаимодейстовал с PDO</a></li>
-</ul>
 
-<ul>
   <li>науился подключать mysql</li>
 </ul> 
 
 <h1>10.03.2019</h1>
 
-<ul>
+<ul class="list4b">
   <li>принцип пработы с базой данный</li>
-</ul>
 
 
-<ul>
   <li><a href="https://github.com/altairwayne/ssad/blob/master/rest_functions">парсить данные сайта в таблицу pma</a></li>
-</ul>
 
-<ul>
   <li><a href="https://github.com/altairwayne/ssad/blob/master/rest_index">работать с методами этапа SELECT</a></li>
-</ul>
 
-<ul>
   <li><a href="https://github.com/altairwayne/ssad/blob/master/rest_reload">взаимодействие таблиц между собой</a></li>
-</ul>
 
-<ul>
   <li><a href="https://github.com/altairwayne/ssad/blob/master/rest_reload">превращать данные в массив и работать с помошью их ключей</a></li>
 </ul>
 	
@@ -202,64 +220,46 @@
 
 <h1>17.02.2019</h1>
 
-<ul>
+<ul class="list4b">
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/rest-function">разбиение данных на массивы	</a></li>
-</ul>
 
-<ul>
 	<li>убирать дублирующиеся элементы в массиве</li>
-</ul>
 
 
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/rest-reload">SQL Обьеденения</a></li>
-</ul>
 
 
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/index-rest">работа с LEFT JOIN</a></li>
-</ul>
 
 
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/index-rest">нахождения среднего чека</a></li>
 </ul>
 	
 
 <h1>24.03.2019</h1>
-<ul>
+<ul class="list4b">
 	<li>изучение архитектуры "клиент-сервер"</li>
-</ul>
-<ul>
 	<li>изучение куки</li>
-</ul>
-<ul>
 	<li>взаимодействие между клиентом и сервером</li>
-</ul>
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/session_index">передача даных на сервер (логин и пароль)</a></li>
-</ul>
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/session_auth">логика авторизации</a></li>
 </ul>
 <h1>31.03.2019</h1>
-<ul>
+<ul class="list4b">
 	<li>как взаимодействовать с библиотеками</li>
-</ul>
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/index_rout">подключение библиотеки nicic-a</a></li>
-</ul>
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/index_rout">анонимные функции</li>
-</ul>
-<ul>
 	<li>пространство имен</li>
-</ul>
-<ul>
 	<li><a href="https://github.com/altairwayne/ssad/blob/master/index_rout">основы rout</a></li>
 </ul>
-
-
+<h1>07.03.2019</h1>
+<ul class="list4b">
+	<li><a href="https://github.com/altairwayne/ssad/blob/master/db_index">авторизация на сайт от базы данных</a></li>
+	<li>возможности библиотеки nicic-a</li>
+	<li><a href="https://github.com/altairwayne/ssad/blob/master/db_dol">static классы</a></li>
+	<li><a href="https://github.com/altairwayne/ssad/blob/master/db_dol">обращения статик элементам</a></li>
+	<li><a href="https://github.com/altairwayne/ssad/blob/master/db_index">controller-ы</a></li>
+</ul>
 
 </html>
 
